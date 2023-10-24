@@ -84,31 +84,83 @@
             class="absolute bottom-20 w-6 h-10 rounded-full border-[1px] border-white after:content-[''] after:w-1 after:h-1 after:bg-white after:absolute after:top-1 after:rounded-full duration-300 after:animate-[scroll-animation_1.2s_linear_infinite] after:left-[50%] after:translate-x-[-50%]">
         </span>
     </section>
-    <section class="p-4 h-[1200px] bg-[#0E141B]">
+    <section class="p-4 pb-40 bg-[#0E141B] ">
         <div id="messenger" class="max-w-[800px] mx-auto mt-[50px]">
             <div class="rounded-2xl p-6 bg-black">
-                <div class="h-[400px] overflow-y-scroll pr-4">
+                <div class="h-[400px] overflow-y-scroll pr-4" id="main-container-messages">
                     <span id="time" class="text-[#333] w-full flex justify-center"></span>
                     <div>
 
-                        <ul id="chat-meggase-list" class="flex gap-4 flex-col p-4">
-                            <li class="flex rounded-full justify-end">
-                                <p id="message-padding-right"
-                                    class="max-w-[250px] bg-[#0078FF] text-white py-2 px-4 break-all">
-                                    Siema siemasdfasdfasdfsadfasdfasfasfasfasdfsad
-                                </p>
-                            </li>
-                            <li class="flex rounded-full justify-start">
-                                <p id="message-padding-left"
-                                    class="max-w-[250px] bg-[#0078FF] text-white py-2 px-4 break-all">
-                                    Siemafsadfasdfasdfsadfsafsadfasdfsadfasdfasdf
-                                </p>
-                            </li>
-
-                        </ul>
+                        <ul id="chat-meggase-list" class="flex gap-4 flex-col p-4 overflow-hidden "></ul>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="p-4 bg-[#0E141B] flex justify-center pb-40">
+        <div class="w-[80%] flex flex-col  p-4">
+            <h1 class="text-4xl text-white font-bold w-full text-left">About me </h1>
+
+            <div class="flex p-6 gap-6">
+                <div class="w-[20%] flex justify-center items-center">
+                    <img src="../img/Sticker.png" alt="my-image" class="w-[100px] bg-slate-500 rounded-full p-4">
+                </div>
+
+                <div
+                    class="grid flex-1 grid-rows-1 grid-cols-2 px-8 gap-6 bg-[rgba(21,29,39,0.6)] p-6 rounded-2xl text-white">
+                    <div class="flex-1">
+                        <p>I am an ambitious and creative junior front-end developer with a passion for creating
+                            beautiful and functional websites. Since I discovered the fascinating world of coding, I
+                            have been continuously working on improving my front-end skills.
+                        </p><br>
+                        <p>
+                            My experience includes working with HTML, CSS, and JavaScript, as well as basic knowledge of
+                            popular framework such as React. I am determined to create responsive and
+                            accessible websites that not only look appealing but also offer an excellent user
+                            experience.
+                        </p><br>
+                        <p>
+                            I believe in the power of effective communication, teamwork, and dedication to project
+                            success. As a junior front-end developer, I am ready to work diligently, learn, and make a
+                            valuable impact on any project I'm part of.
+                        </p>
+
+                    </div>
+                    <div class="flex-1 flex flex-col pl-6 ">
+                        <h2 class="text-2xl font-bold px-2 ">What i know:</h2>
+                        <ul class=" list-disc">
+                            <li class="py-2"><span class="font-bold text-green-300">HTML5 CSS3 </span>- I have a strong
+                                command of HTML and CSS, enabling me to create websites with an elegant and up-to-date
+                                appearance.</li>
+                            <li> <span class="font-bold text-green-300">JavaScript</span> - I possess a solid knowledge
+                                of JavaScript, including proficiency in pure JS and working with libraries and
+                                framework like React</li>
+                            <li> <span class="font-bold text-green-300">GIT</span> - I know version control tools like
+                                Git, making project code management more
+                                efficient.</li>
+                            <li><span class="font-bold text-green-300">SCSS (Sass)</span> - I am skilled in SCSS (Sass),
+                                a CSS preprocessor that streamlines and
+                                organizes stylesheets, improving code maintainability</li>
+                            <li><span class="font-bold text-green-300">Tailwind CSS</span> - I have experience with
+                                Tailwind CSS, a CSS framework that enables the rapid creation of custom interfaces using
+                                pre-defined utility classes,</li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2  flex justify-center items-center">
+                        <button
+                            class="bg-green-400 rounded-xl p-2 px-5 text-center font-bold cursor-pointer text-white mt-6">Download
+                            CV</button>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="p-4 bg-[#0E141B] flex justify-center">
+        <div class="w-[80%] flex flex-col  p-4">
+            <h1 class="text-4xl text-white font-bold w-full text-left">Recent Work</h1>
         </div>
     </section>
 
