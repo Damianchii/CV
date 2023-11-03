@@ -88,7 +88,7 @@ let intervalID = setInterval(() => {
 	    <p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
 	        class="max-w-[250px] bg-[${
 						chatMessages[number].align == 'right' ? '#0085FE' : '#444444' //0085FE
-					}] text-white py-2 px-4 break-all">
+					}] text-white py-2 px-4 ">
 	        ${chatMessages[number].message}
 	    </p>
 	</li>`)

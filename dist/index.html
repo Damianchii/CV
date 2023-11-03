@@ -25,12 +25,13 @@
 </head>
 
 <body>
+    <!--Menu-->
     <nav id="nav"
-        class="fixed top-0 left-0 duration-200 h-full bg-[#102232]  flex flex-col justify-between p-4 border-r-[0.1px] border-[#444]">
+        class="fixed lg:top-0 bottom-0 left-0 h-[60px] w-full  lg:left-0 duration-200 lg:h-full lg:w-auto bg-[#102232]  lg:flex flex flex-row lg:flex-col p-4 justify-center  lg:justify-between">
         <button id="roll-out-button"
-            class="self-end bg-[#0E141B] border-[#39FF14] cursor-pointer mr-1.5 w-8 h-8 flex justify-center items-center rounded-full text-[#fff] duration-300 justify-self-end"><i
+            class="lg:flex hidden lg:self-end lg:bg-[#0E141B] lg:border-[#39FF14] lg:cursor-pointer lg:mr-1.5 lg:w-8 lg:h-8 lg:justify-center lg:items-center lg:rounded-full lg:text-[#fff] lg:duration-300 lg:justify-self-end"><i
                 class="fa-solid fa-chevron-right duration-300"></i></button>
-        <ul class="flex-col p-2 text-[#fff]">
+        <ul class="lg:flex-col flex-row lg:gap-0 gap-6 flex lg:p-2 text-[#fff]">
             <li class="py-4 cursor-pointer flex overflow-hidden relative items-center"><span
                     class="material-symbols-outlined">
                     home
@@ -68,8 +69,9 @@
                 <p class="absolute pl-10 text-white">Contact</p>
             </li>
         </ul>
-        <span class="w-full text-center">jezyk</span>
+        <span class="lg:block hidden"></span>
     </nav>
+    <!--Main-->
     <section class="flex grow h-full bg-[#0E141B] justify-center items-center">
         <div class=" flex flex-col justify-center items-center text-white ">
             <div class="w-[200px] rounded-full border-2 p-6 border-[#39FF14] flex justify-center items-cetner">
@@ -84,6 +86,7 @@
             class="absolute bottom-20 w-6 h-10 rounded-full border-[1px] border-white after:content-[''] after:w-1 after:h-1 after:bg-white after:absolute after:top-1 after:rounded-full duration-300 after:animate-[scroll-animation_1.2s_linear_infinite] after:left-[50%] after:translate-x-[-50%]">
         </span>
     </section>
+    <!--Messenger-->
     <section class="p-4 pb-40 bg-[#0E141B] ">
         <div id="messenger" class="max-w-[800px] mx-auto mt-[50px]">
             <div class="rounded-2xl p-6 bg-black">
@@ -97,6 +100,7 @@
             </div>
         </div>
     </section>
+    <!--About me-->
     <section class="p-4 bg-[#0E141B] flex justify-center pb-40">
         <div class="w-[80%] flex flex-col  p-4">
             <h1 class="text-4xl text-white font-bold w-full text-left">About me </h1>
@@ -124,7 +128,7 @@
                             success. As a junior front-end developer, I am ready to work diligently, learn, and make a
                             valuable impact on any project I'm part of.
                         </p>
-                        <ul class="flex w-full justify-between  flex-1 items-center">
+                        <ul class="flex w-full justify-between  flex-1  pt-6 items-center">
                             <li><img src="https://skillicons.dev/icons?i=html" alt="HTML"></li>
                             <li><img src="https://skillicons.dev/icons?i=css" alt="css"></li>
                             <li><img src="https://skillicons.dev/icons?i=js" alt="js"></li>
@@ -158,7 +162,7 @@
                                 management. I am eager to further develop my skills in this area.</li>
                         </ul>
                     </div>
-                    <div class="col-span-2  flex justify-center items-center">
+                    <div class="col-span-2  flex justify-center items-center ">
                         <button
                             class="bg-green-400 rounded-xl p-2 px-5 text-center font-bold cursor-pointer text-white mt-6">Download
                             CV</button>
@@ -170,6 +174,7 @@
             </div>
         </div>
     </section>
+    <!--Recent Work-->
     <section class="p-4 bg-[#0E141B] flex justify-center">
         <div class="w-[80%] flex flex-col  p-4 ">
             <h1 class="text-4xl text-white font-bold w-full text-left">Recent Work</h1>
@@ -177,8 +182,12 @@
                 <div class="w-[550px] bg-[#10223291] p-4 rounded-2xl flex justify-center flex-col shadow-2xl"><a
                         href="https://evo-detailing.pl"><img src="../img/evo-detailing-img.png"
                             class="rounded-xl cursor-pointer" alt="evo-detailing"></a>
-                    <a href="https://evo-detailing.pl">
-                        <h2 class="text-center text-2xl font-bold text-white p-4 cursor-pointer">evo-detailing.pl</h2>
+                    <a class="flex justify-center items-center" href="https://evo-detailing.pl">
+                        <h2 class="text-center text-2xl font-bold text-white py-4 px-2 cursor-pointer">evo-detailing.pl
+                        </h2>
+                        <span class="material-symbols-outlined text-white ">
+                            link
+                        </span>
                     </a>
                     <p class="px-6 py-2 text-center text-white">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis accusantium molestias cumque illum
@@ -199,9 +208,13 @@
                 </div>
                 <div class="w-[550px] bg-[#10223291] p-4 rounded-2xl flex justify-center flex-col shadow-2xl"><a
                         href="https://tomstal-kominy.pl"><img src="../img/tomstal-img.png"
-                            class="rounded-xl cursor-pointer" alt="evo-detailing"></a>
-                    <a href="https://evo-detailing.pl">
-                        <h2 class="text-center text-2xl font-bold text-white p-4 cursor-pointer">tomstal-kominy.pl</h2>
+                            class="rounded-xl cursor-pointer" alt="tomstal-kominy"></a>
+                    <a class="flex justify-center items-center" href="http://tomstal-kominy.pl/">
+                        <h2 class="text-center text-2xl font-bold text-white py-4 px-2 cursor-pointer">tomstal-kominy.pl
+                        </h2>
+                        <span class="material-symbols-outlined text-white ">
+                            link
+                        </span>
                     </a>
                     <p class="px-6 py-2 text-center text-white">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis accusantium molestias cumque illum
@@ -230,12 +243,13 @@
             </div>
         </div>
     </section>
+    <!--Contact-->
     <section class="p-4 bg-[#0E141B] flex justify-center">
         <div class="w-[80%] flex flex-col  p-4 ">
             <h1 class="text-4xl text-white font-bold w-full text-left">Contact</h1>
-            <div class="p-4">
-                <ul class="flex gap-6">
-                    <li class="flex gap-4 bg-red-500 items-center rounded-full p-4 px-6 shadow-2xl bg-[#10223291]">
+            <div class="p-4 py-10">
+                <ul class="flex gap-6 flex-wrap">
+                    <li class="flex gap-4  items-center rounded-full p-4 px-6 shadow-2xl bg-[#10223291]">
                         <span
                             class="p-4 shadow-xl rounded-full text-green-500 bg-[#0E141B]  w-[50px] flex justify-center items-center h-[50px]"><span
                                 class="material-symbols-outlined">
@@ -246,7 +260,7 @@
                             <p class="text-white">Damian Czerwiński</p>
                         </div>
 
-                    <li class="flex gap-4 bg-red-500 items-center rounded-full p-4 px-6 shadow-2xl bg-[#10223291]">
+                    <li class="flex gap-4  items-center rounded-full p-4 px-6 shadow-2xl bg-[#10223291]">
                         <span
                             class="p-4 shadow-xl rounded-full text-green-500 bg-[#0E141B]  w-[50px] flex justify-center items-center h-[50px]"><span
                                 class="material-symbols-outlined">
@@ -258,20 +272,41 @@
                         </div>
 
                     </li>
-                    <li>
-                        <span></span>
-                        <h3>Mail</h3>
-                        <p>damianczerwinsky@gmail.com</p>
+
+                    <li class="flex gap-4  items-center rounded-full p-4 px-6 shadow-2xl bg-[#10223291]">
+                        <span
+                            class="p-4 shadow-xl rounded-full text-green-500 bg-[#0E141B]  w-[50px] flex justify-center items-center h-[50px]">
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span></span>
+                        <div>
+                            <h3 class="text-white font-extrabold text-lg">Mail 📧</h3>
+                            <p class="text-white">damianczerwinsky@gmail.com </p>
+                        </div>
+
                     </li>
-                    <li>
-                        <span></span>
-                        <h3>Linkedin</h3>
-                        <p></p>
+                    <li class="flex gap-4  items-center rounded-full p-4 px-6 shadow-2xl  bg-[#10223291]">
+                        <span
+                            class="p-4 shadow-xl rounded-full text-green-500 bg-[#0E141B]  w-[50px] flex justify-center items-center h-[50px]">
+                            <i class="fa-brands fa-linkedin text-2xl"></i></span>
+                        <div>
+                            <h3 class="text-white font-extrabold text-lg">Linkedin 🚀</h3>
+                            <p class="text-blue-500 cursor-pointer"><a
+                                    href="https://www.linkedin.com/in/damian-czerwi%C5%84ski-12560321b">Damian
+                                    Czerwiński</a></p>
+                        </div>
+
                     </li>
-                    <li>
-                        <span class="p-4 shadow-2xl"></span>
-                        <h3>Github</h3>
-                        <p>Damianichii</p>
+                    <li class="flex gap-4  items-center rounded-full p-4 px-6 shadow-2xl bg-[#10223291]">
+                        <span
+                            class="p-4 shadow-xl rounded-full text-green-500 bg-[#0E141B]  w-[50px] flex justify-center items-center h-[50px]">
+                            <i class="fa-brands fa-github text-2xl"></i></span>
+                        <div>
+                            <h3 class="text-white font-extrabold text-lg">Github 🦉</h3>
+                            <p class="text-white"><a href="https://github.com/Damianchii"
+                                    class="text-blue-500 cursor-pointer">Damianichii</a> </p>
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -279,7 +314,11 @@
 
 
     </section>
-
+    <!--Footer-->
+    <footer class="p-4 bg-[#0F1B27] flex justify-center">
+        <h2 class="text-white py-2">Copyright © 2023. All rights are reserved</h2>
+    </footer>
+    <div class="h-[60px] w-full bg-[#102232] lg:hidden">asd</div>
     <script src="main.js"></script>
     <script src="messenger.js"></script>
 </body>
