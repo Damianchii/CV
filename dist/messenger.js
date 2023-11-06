@@ -5,29 +5,69 @@ const chatMessages = [
 		align: 'right',
 	},
 	{
-		name: 'chef',
+		name: 'me',
 		message: 'I want to express my interests in a position at your company',
 		align: 'right',
 	},
 	{
-		name: 'me',
-		message: 'dLorem ipsum',
-		align: 'right',
-	},
-	{
 		name: 'chef',
-		message: 'Lorem ipsum',
-		align: 'right',
-	},
-	{
-		name: 'chef',
-		message: 'Lorem ipsum',
+		message: 'Okey?... What you can do ?',
 		align: 'left',
 	},
 	{
-		name: 'chef',
-		message: 'Lorem ipsum',
+		name: 'me',
+		message: 'I know Front-end technologies as like HTML5 CSS3 JavaScript React SCC and few more',
 		align: 'right',
+	},
+	{
+		name: 'chef',
+		message: 'Mhmm... Do you have any completed projects?',
+		align: 'left',
+	},
+	{
+		name: 'me',
+		message: 'Yes, i do. You can check it on my GitHub',
+		align: 'right',
+	},
+	{
+		name: 'me',
+		message: "Here's the link",
+		align: 'right',
+	},
+	{
+		name: 'me',
+		message: '<a target="blank" href="https://github.com/Damianchii">https://github.com/Damianchii</a>',
+		align: 'right',
+	},
+	{
+		name: 'chef',
+		message: 'Well, why should I hire you?',
+		align: 'left',
+	},
+	{
+		name: 'me',
+		message: 'First of all, I am very determined to start my first job as a junior',
+		align: 'right',
+	},
+	{
+		name: 'me',
+		message: 'I know that I will give my best',
+		align: 'right',
+	},
+	{
+		name: 'me',
+		message: 'I will want to expand my knowledge in the field of frontend',
+		align: 'right',
+	},
+	{
+		name: 'me',
+		message: 'I know that the beginnings can be difficult, but I learn quickly',
+		align: 'right',
+	},
+	{
+		name: 'chef',
+		message: "OK, we'll let you know",
+		align: 'left',
 	},
 ]
 //Current time
@@ -72,6 +112,14 @@ const waitingForMessage = () => {
 
 waitingForMessage()
 
+const bgColor = (side) => {
+	if (side === 'right') {
+		return '#0085FE'
+	} else if (side === 'left') {
+		return '#123321'
+	}
+}
+
 let intervalID = setInterval(() => {
 	// sprawdzenie, jesli number jest wiekszy od elemetow listy interval zakancza sie
 	if (number >= chatMessages.length - 1) {
@@ -82,23 +130,23 @@ let intervalID = setInterval(() => {
 	menu.removeChild(menu.lastElementChild)
 
 	//dodawanie elementu
-	$('#chat-meggase-list').append(`<li class="flex rounded-full animate-[fade-in-message-${
+	$('#chat-meggase-list').append(`<li class="flex  rounded-full animate-[fade-in-message-${
 		chatMessages[number].align == 'right' ? 'right' : 'left'
 	}_0.5s_ease] justify-${chatMessages[number].align == 'right' ? 'end' : 'start'}">
 	    <p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
 	        class="max-w-[250px] bg-[${
-						chatMessages[number].align == 'right' ? '#0085FE' : '#444444' //0085FE
-					}] text-white py-2 px-4 ">
+						chatMessages[number].align == 'right' ? '#0085FE' : '#444444'
+					}] text-white py-2 px-2 ${chatMessages[number].align == 'right' ? 'pr-2 pl-4' : 'pl-4 pr-4'}">
 	        ${chatMessages[number].message}
 	    </p>
 	</li>`)
-
+	console.log(bgColor(chatMessages[number].align))
 	number++
 
 	//wykonuj animacje pisania wiadomosci
 	if (number >= chatMessages.length) {
 		return
 	} else {
-		setTimeout(waitingForMessage(), 3000)
+		setTimeout(waitingForMessage(), 5000)
 	}
-}, 3000)
+}, 5000)

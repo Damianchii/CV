@@ -1,10 +1,17 @@
 const rollOutButton = document.querySelector('#roll-out-button')
 const nav = document.querySelector('#nav')
+const allLiMenu = document.querySelectorAll('nav ul li')
 
 rollOutButton.addEventListener('click', () => {
-	nav.classList.toggle('w-[200px]')
+	nav.classList.toggle('lg:w-[200px]')
 	document.querySelector('nav > button > i').classList.toggle('rotate-180')
-	console.log(document.querySelector('nav > ul > li > p'))
+})
+
+allLiMenu.forEach((li) => {
+	li.addEventListener('click', () => {
+		nav.classList.remove('lg:w-[200px]')
+		document.querySelector('nav > button > i').classList.toggle('rotate-180')
+	})
 })
 
 //Typing
