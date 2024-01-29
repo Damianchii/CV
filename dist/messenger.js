@@ -96,7 +96,7 @@ $('#time').append(time)
 let number = 0
 
 const waitingForMessage = () => {
-	$('#chat-meggase-list').append(`<li class="flex rounded-full justify-${
+	$('#chat-meggase-list').append(`<li class="flex  rounded-full justify-${
 		chatMessages[number].align == 'right' ? 'end' : 'start'
 	} animate-[fade-in-message-${chatMessages[number].align == 'right' ? 'right' : 'left'}_0.5s_ease]">
 	<p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
@@ -112,14 +112,6 @@ const waitingForMessage = () => {
 
 waitingForMessage()
 
-const bgColor = (side) => {
-	if (side === 'right') {
-		return '#0085FE'
-	} else if (side === 'left') {
-		return '#123321'
-	}
-}
-
 let intervalID = setInterval(() => {
 	// sprawdzenie, jesli number jest wiekszy od elemetow listy interval zakancza sie
 	if (number >= chatMessages.length - 1) {
@@ -130,17 +122,16 @@ let intervalID = setInterval(() => {
 	menu.removeChild(menu.lastElementChild)
 
 	//dodawanie elementu
-	$('#chat-meggase-list').append(`<li class="flex  rounded-full animate-[fade-in-message-${
+	$('#chat-meggase-list').append(`<li class="flex animate-[fade-in-message-${
 		chatMessages[number].align == 'right' ? 'right' : 'left'
 	}_0.5s_ease] justify-${chatMessages[number].align == 'right' ? 'end' : 'start'}">
 	    <p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
-	        class="max-w-[250px] bg-[${
-						chatMessages[number].align == 'right' ? '#0085FE' : '#444444'
-					}] text-white py-2 px-2 ${chatMessages[number].align == 'right' ? 'pr-2 pl-4' : 'pl-4 pr-4'}">
+	        class="max-w-[250px] text-left  ${
+						chatMessages[number].align === 'right' ? 'bg-[#0085FE]' : 'bg-[#555555]'
+					} text-white py-2 px-2 ${chatMessages[number].align == 'right' ? 'pr-2 pl-4' : 'pl-4 pr-4'}">
 	        ${chatMessages[number].message}
 	    </p>
 	</li>`)
-	console.log(bgColor(chatMessages[number].align))
 	number++
 
 	//wykonuj animacje pisania wiadomosci
