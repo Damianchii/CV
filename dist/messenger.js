@@ -122,11 +122,11 @@ let intervalID = setInterval(() => {
 	menu.removeChild(menu.lastElementChild)
 
 	//dodawanie elementu
-	$('#chat-meggase-list').append(`<li class="flex animate-[fade-in-message-${
+	$('#chat-meggase-list').append(`<li class="flex  animate-[fade-in-message-${
 		chatMessages[number].align == 'right' ? 'right' : 'left'
 	}_0.5s_ease] justify-${chatMessages[number].align == 'right' ? 'end' : 'start'}">
 	    <p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
-	        class="max-w-[250px] text-left  ${
+	        class="max-w-[250px] lg:text-sm text-xs  ${
 						chatMessages[number].align === 'right' ? 'bg-[#0085FE]' : 'bg-[#555555]'
 					} text-white py-2 px-2 ${chatMessages[number].align == 'right' ? 'pr-2 pl-4' : 'pl-4 pr-4'}">
 	        ${chatMessages[number].message}
