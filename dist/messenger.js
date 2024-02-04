@@ -96,9 +96,13 @@ $('#time').append(time)
 let number = 0
 
 const waitingForMessage = () => {
-	$('#chat-meggase-list').append(`<li class="flex  rounded-full justify-${
-		chatMessages[number].align == 'right' ? 'end' : 'start'
-	} animate-[fade-in-message-${chatMessages[number].align == 'right' ? 'right' : 'left'}_0.5s_ease]">
+	$('#chat-meggase-list').append(`<li class="flex  rounded-full animate-[fade-in-message-${
+		chatMessages[number].align == 'right' ? 'right' : 'left'
+	}_0.5s_ease]" ${
+		chatMessages[number].align == 'right'
+			? (chatMessages[number].style = 'style = "justify-content: end;"')
+			: (chatMessages[number].style = 'justify-content: start;')
+	}>
 	<p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
 		class="flex justify-center items-center gap-1 max-w-[250px] bg-[#303030] text-white py-2 px-4 h-[40px]">
 		<span
@@ -124,7 +128,11 @@ let intervalID = setInterval(() => {
 	//dodawanie elementu
 	$('#chat-meggase-list').append(`<li class="flex  animate-[fade-in-message-${
 		chatMessages[number].align == 'right' ? 'right' : 'left'
-	}_0.5s_ease] justify-${chatMessages[number].align == 'right' ? 'end' : 'start'}">
+	}_0.5s_ease]" ${
+		chatMessages[number].align == 'right'
+			? (chatMessages[number].style = 'style = "justify-content: end;"')
+			: (chatMessages[number].style = 'justify-content: start;')
+	}>
 	    <p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
 	        class="max-w-[250px] lg:text-sm text-xs  ${
 						chatMessages[number].align === 'right' ? 'bg-[#0085FE]' : 'bg-[#555555]'

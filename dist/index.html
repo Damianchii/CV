@@ -96,8 +96,9 @@
         <span class="lg:block hidden"></span>
     </nav>
     <!--Main-->
-    <section class="flex grow h-full bg-[#0E141B] justify-center items-center" id="home">
-        <div class="flex flex-col justify-center items-center text-white max-container">
+    <section class="flex grow h-full relative bg-[#0E141B] justify-center items-center" id="home">
+        <canvas id="canvas1" class="lg:block hidden absolute z-11 top-0 left-0 "></canvas>
+        <div class="flex flex-col relative z-12 justify-center items-center text-white max-container">
             <div
                 class="lg:w-[160px] lg:h-[160px] max-lg:w-[120px] max-lg:h-[120px] rounded-full border-2 p-6 border-[#39FF14] flex justify-center items-center ">
                 <img src="../img/Sticker.png" alt="sticker"
@@ -109,20 +110,19 @@
             <a href="#chat" id="bn5" class="my-4">Let's go!</a>
         </div>
         <span
-            class="absolute bottom-20 w-6 h-10 mb-10 rounded-full border-[1px] border-white after:content-[''] after:w-1 after:h-1 after:bg-white after:absolute after:top-1 after:rounded-full duration-300 after:animate-[scroll-animation_1.2s_linear_infinite] after:left-[50%] after:translate-x-[-50%]">
+            class="absolute z-12 bottom-20 w-6 h-10 mb-10 rounded-full border-[1px] border-white after:content-[''] after:w-1 after:h-1 after:bg-white after:absolute after:top-1 after:rounded-full duration-300 after:animate-[scroll-animation_1.2s_linear_infinite] after:left-[50%] after:translate-x-[-50%]">
         </span>
     </section>
     <!--Messenger-->
     <section class="p-4 pb-40 bg-[#0E141B]" id="chat">
-        <div id="messenger" class="max-w-[800px] mx-auto mt-[50px] max-container">
+        <div id="messenger" class="max-w-[800px]  mx-auto mt-[50px] max-container">
             <div class="rounded-2xl lg:p-6 p-4 bg-black">
                 <div class="h-[400px] overflow-y-scroll lg:pr-4 pr-2" id="main-container-messages">
                     <span id="time" class="text-[#333] w-full flex justify-center p-2"></span>
-
                     <ul id="chat-meggase-list" class="flex gap-4 flex-col lg:p-4 max-lg:py-4 overflow-hidden ">
                         <li class="hidden rounded-full animate-[fade-in-message-left_0.5s_ease] justify-start">
-                            <p id="message-padding-left" class="max-w-[250px] bg-[#444] text-white py-2 px-2 pl-4 pr-4">
-
+                            <p id="message-padding-left"
+                                class="max-w-[250px] float-right bg-[#444] text-white py-2 px-2 pl-4 pr-4">
                             </p>
                         </li>
                     </ul>
@@ -387,6 +387,7 @@
         <h2 class="text-white py-2 lg:text-lg text-sm">Copyright © 2023. All rights are reserved</h2>
     </footer>
     <div class="h-[60px] w-full bg-[#102232] lg:hidden"></div>
+    <script src="canvas.js"></script>
     <script src="main.js"></script>
     <script src="messenger.js"></script>
 </body>
