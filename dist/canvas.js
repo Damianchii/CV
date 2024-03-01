@@ -5,6 +5,7 @@ const particlesArray = []
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
+//random color
 const randomColor = () => {
 	let color = ''
 	color += '#' + Math.random().toString(16).slice(2, 8).toUpperCase()
