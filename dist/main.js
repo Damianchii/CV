@@ -1,7 +1,7 @@
 const rollOutButton = document.querySelector('#roll-out-button')
 const nav = document.querySelector('#nav')
 const allLiMenu = document.querySelectorAll('nav ul li')
-
+//rollout button
 rollOutButton.addEventListener('click', () => {
 	nav.classList.toggle('lg:w-[200px]')
 	document.querySelector('nav > button > i').classList.toggle('rotate-180')
