@@ -134,7 +134,7 @@ let intervalID = setInterval(() => {
 			: (chatMessages[number].style = 'justify-content: start;')
 	}>
 	    <p id="message-padding-${chatMessages[number].align == 'right' ? 'right' : 'left'}"
-	        class="max-w-[250px] lg:text-sm text-xs  ${
+	        class="lg:max-w-[250px] max-w-[180px] lg:text-sm text-xs  ${
 						chatMessages[number].align === 'right' ? 'bg-[#0085FE]' : 'bg-[#555555]'
 					} text-white py-2 px-2 ${chatMessages[number].align == 'right' ? 'pr-2 pl-4' : 'pl-4 pr-4'}">
 	        ${chatMessages[number].message}
