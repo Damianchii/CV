@@ -693,6 +693,10 @@ video {
   width: 20px;
 }
 
+.w-\[35px\] {
+  width: 35px;
+}
+
 .max-w-\[250px\] {
   max-width: 250px;
 }
@@ -1449,6 +1453,10 @@ ul {
 
   .lg\:mt-6 {
     margin-top: 1.5rem;
+  }
+
+  .lg\:mt-\[50px\] {
+    margin-top: 50px;
   }
 
   .lg\:block {
